@@ -1,0 +1,23 @@
+{
+  "name": "sequoia",
+  "version": "0.0.1",
+  "description": "Generate linear variable.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "sequoia",
+    "test"
+  ],
+  "dependencies": {
+    "moment": "*"
+  },
+  "author": "Keiji Matsuzaki",
+  "license": "MIT",
+  "devDependencies": {
+    "expect.js": "~0.2.0",
+    "underscore": "~1.5.2",
+    "mocha": "~1.13.0"
+  }
+}
