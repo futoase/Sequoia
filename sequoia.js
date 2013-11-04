@@ -1,15 +1,15 @@
 var Bucket = {integer: {}, float: {}, date: {}};
 
-if (exports !== "undefined") {
+if (typeof exports !== "undefined") {
   module.exports = Bucket;
 }
 
-if (require !== "undefined") {
+if (typeof require !== "undefined") {
   var moment = require('moment')
   var Bucket = require('./bucket');
 }
 
-if (exports !== "undefined") {
+if (typeof exports !== "undefined") {
   module.exports = Sequoia();
 }
 
@@ -77,21 +77,17 @@ function Sequoia() {
 
 };
 
-if (exports !== "undefined") {
-  exports.Sequoia = Sequoia();
-}
+(function(root) {
 
-(function() {
-  var root;
-
-  root = window;
   root.sequoia = Sequoia();
   root.Bucket = Bucket;
 
-}).call(this);
+})(window);
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
-script.src = '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js'
+script.src = 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js'
 
-document.body.appendChild(script);
+window.onload = function() {
+  document.body.appendChild(script);
+};
