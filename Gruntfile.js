@@ -3,7 +3,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     concat: {
       dist: {
-        src: ['lib/sequoia.js'],
+        src: ['lib/bucket.js', 'lib/sequoia.js', 'lib/browser.js'],
         dest: 'sequoia.js'
       }
     },
