@@ -6,9 +6,17 @@ module.exports = function (grunt) {
         src: ['lib/sequoia.js'],
         dest: 'sequoia.js'
       }
+    },
+    uglify: {
+      terget: {
+        files: {
+          'sequoia.min.js': ['sequoia.js']
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.registerTask('default', ['concat']);
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.registerTask('default', ['concat', 'uglify']);
 }
