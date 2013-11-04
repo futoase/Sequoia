@@ -1,2 +1,2 @@
 // Sequoia.
-module.exports = require('./lib/sequoia')
+module.exports = require('./lib/sequoia');
